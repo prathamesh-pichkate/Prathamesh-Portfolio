@@ -12,7 +12,7 @@ const Projects = () => {
       description: "Developed a personal portfolio website to showcase my skills, projects, and experience as a full stack web developer. Utilized modern web technologies like React and Tailwind to create a responsive, user-friendly design.",
       imageUrl: "Portfolio.png",
       icons: [<CiHeart key="heart" />, <FaGithub key="github" />, <GrLinkNext key="link" />],
-      delay: 1.2,
+      delay: 0.7,
     },
     {
       id: 2,
@@ -20,14 +20,14 @@ const Projects = () => {
       description: "Developed a Pure Calm website using React for a hackathon project. Collaborated with a team of four to create a comprehensive platform offering various types of therapies. Also created a responsive and user-friendly design.",
       imageUrl: "PureCalm.png",
       icons: [<CiHeart key="heart" />, <FaGithub key="github" />, <GrLinkNext key="link" />],
-      delay: 0.7,
+      delay: 0.5,
     },{
       id: 3,
       title: "Blog Website",
       description: "Created a full stack blog application with user authentication and password hashing using salt. Users can log in, add blogs, and share their posts with everyone. The application ensures secure user data handling and provides a seamless blogging experience for all users.",
       imageUrl: "BlogWebsite.png",
       icons: [<CiHeart key="heart" />, <FaGithub key="github" />, <GrLinkNext key="link" />],
-      delay: 0.3,
+      delay: 0.2,
     },
   ];
 
