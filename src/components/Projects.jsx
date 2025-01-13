@@ -41,8 +41,8 @@ const Projects = () => {
             />
           ),
         },
-        { icon: <FaGithub key="github" />, link: portfolioGithub },
-        { icon: <GrLinkNext key="link" />, link: portfolioLink },
+        { icon: <FaGithub key="github" />, link: blogGithub },
+        { icon: <GrLinkNext key="link" />, link: blogLink },
       ],
       delay: 0.7,
     },
