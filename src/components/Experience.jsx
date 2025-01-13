@@ -5,17 +5,17 @@ const EXPERIENCES = [
     year: "2024 - Present",
     role: "Full Stack Web Developer",
     company: "MusicTech",
-    description: `Full Stack Web Developer at an innovative music tech startup, responsible for developing and maintaining web applications, ensuring responsive design, optimizing for performance, and collaborating with cross-functional teams to deliver scalable solutions.`,
-    technologies: ["HTML", "CSS", "Javascript", "Reactjs", "Nodejs", "Expressjs", "MongoDB"],
+    description: `Full Stack Web Developer Intern at an innovative music tech startup, responsible for developing and maintaining web applications, ensuring responsive design, optimizing for performance, and collaborating with cross-functional teams to deliver scalable solutions.`,
+    technologies: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Reactjs",
+      "Nodejs",
+      "Expressjs",
+      "MongoDB",
+    ],
     delay: 0.4,
-  },
-  {
-    year: "May - 2024",
-    role: "Full Stack Intern",
-    company: "Bharat Intern",
-    description: `Designed and developed user interfaces with Node.js and React, integrating frontend with Node.js APIs, implementing responsive designs, and adding authentication for security.`,
-    technologies: ["HTML", "CSS", "Javascript", "Reactjs", "Nodejs", "MongoDB"],
-    delay: 0.7,
   },
 ];
 
@@ -69,6 +69,6 @@ const Experience = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Experience;

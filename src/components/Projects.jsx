@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Projects = () => {
+  const blogLink = import.meta.env.VITE_BLOG_LINK;
+  const blogGithub = import.meta.env.VITE_BLOG_GITHUB;
   const portfolioLink = import.meta.env.VITE_PORTFOLIO_LINK;
   const portfolioGithub = import.meta.env.VITE_PORTFOLIO_GITHUB;
   const currencyLink = import.meta.env.VITE_CURRENCY_LINK;
@@ -25,28 +27,67 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Portfolio Website",
-      description: "Developed a personal portfolio website to showcase my skills, projects, and experience as a full stack web developer. Utilized modern web technologies like React and Tailwind to create a responsive, user-friendly design.",
-      imageUrl: "Portfolio.png",
+      title: "The Complete Stack",
+      description:
+        "Developed a MERN stack blogging platform with features like user authentication (Google OAuth via Firebase), blog post CRUD operations, comments, user profiles, and admin controls. Integrated Cloudinary for image storage and styled with Tailwind CSS for a responsive design.",
+      imageUrl: "blog.png",
       icons: [
-        { icon: <FaHeart key="heart" onClick={() => changeColor(1)} color={heartColors[1]} /> }, 
+        {
+          icon: (
+            <FaHeart
+              key="heart"
+              onClick={() => changeColor(1)}
+              color={heartColors[1]}
+            />
+          ),
+        },
         { icon: <FaGithub key="github" />, link: portfolioGithub },
-        { icon: <GrLinkNext key="link" />, link: portfolioLink }
+        { icon: <GrLinkNext key="link" />, link: portfolioLink },
       ],
       delay: 0.7,
     },
     {
       id: 2,
+      title: "Portfolio Website",
+      description:
+        "Developed a personal portfolio website to showcase my skills, projects, and experience as a full stack web developer. Utilized modern web technologies like React and Tailwind to create a responsive, user-friendly design.",
+      imageUrl: "Portfolio.png",
+      icons: [
+        {
+          icon: (
+            <FaHeart
+              key="heart"
+              onClick={() => changeColor(1)}
+              color={heartColors[1]}
+            />
+          ),
+        },
+        { icon: <FaGithub key="github" />, link: portfolioGithub },
+        { icon: <GrLinkNext key="link" />, link: portfolioLink },
+      ],
+      delay: 0.7,
+    },
+    {
+      id: 3,
       title: "Currency Convertor",
-      description: "I developed a fully functional Currency Converter website using HTML, CSS, and JavaScript. This project leverages a reliable currency conversion API to provide real-time exchange rates. It allows users to convert amounts between different currencies.",
+      description:
+        "I developed a fully functional Currency Converter website using HTML, CSS, and JavaScript. This project leverages a reliable currency conversion API to provide real-time exchange rates. It allows users to convert amounts between different currencies.",
       imageUrl: "Currency.png",
       icons: [
-        { icon: <FaHeart key="heart" onClick={() => changeColor(2)} color={heartColors[2]} /> },
+        {
+          icon: (
+            <FaHeart
+              key="heart"
+              onClick={() => changeColor(2)}
+              color={heartColors[2]}
+            />
+          ),
+        },
         { icon: <FaGithub key="github" />, link: currencyGithub },
-        { icon: <GrLinkNext key="link" />, link: currencyLink }
+        { icon: <GrLinkNext key="link" />, link: currencyLink },
       ],
       delay: 0.5,
-    }
+    },
   ];
 
   const container = (delay) => ({
@@ -75,22 +116,26 @@ const Projects = () => {
             variants={container(project.delay)}
             initial="hidden"
             whileInView="visible"
-            className="w-30 md:w-64 rounded-lg shadow-md p-6 mx-2 mb-4"
+            className="w-30 md:w-80 rounded-lg shadow-md p-6 mx-2 mb-4"
           >
             <img
               src={project.imageUrl}
               alt="Project"
-              className="rounded-md mb-4 h-36 w-60 object-fill"
+              className="rounded-md mb-4 h-48 w-full object-fill"
             />
             <h2 className="text-base font-bold mb-2">{project.title}</h2>
-            <p className="text-gray-600 mb-4" style={{ fontSize: '10px' }}>
+            <p className="text-gray-600 mb-4" style={{ fontSize: "10px" }}>
               {project.description}
             </p>
             <div className="flex flex-row">
               {project.icons.map((iconObj, index) => (
                 <div key={index} className="text-sm text-white-500 mr-2">
                   {iconObj.link ? (
-                    <a href={iconObj.link} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={iconObj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {iconObj.icon}
                     </a>
                   ) : (
