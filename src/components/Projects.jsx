@@ -29,10 +29,10 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "The Complete Stack",
+      title: "QuickConnect",
       description:
-        "Developed a MERN stack blogging platform with features like user authentication (Google OAuth via Firebase), blog post CRUD operations, comments, user profiles, and admin controls. Integrated Cloudinary for image storage and styled with Tailwind CSS for a responsive design.",
-      imageUrl: "blog.png",
+        "Developed a real-time chat application with features like user authentication, user profiles and real-time-chat. Integrated Cloudinary for image storage and styled with Tailwind CSS for a responsive design.",
+      imageUrl: "Quickconnect.png",
       icons: [
         {
           icon: (
