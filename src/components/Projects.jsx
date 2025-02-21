@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Projects = () => {
+  const connectLink = import.meta.env.VITE_CONNECT_LINK;
+  const connectGithub = import.meta.env.VITE_CONNECT_GITHUB;
   const blogLink = import.meta.env.VITE_BLOG_LINK;
   const blogGithub = import.meta.env.VITE_BLOG_GITHUB;
   const portfolioLink = import.meta.env.VITE_PORTFOLIO_LINK;
@@ -41,13 +43,34 @@ const Projects = () => {
             />
           ),
         },
+        { icon: <FaGithub key="github" />, link: connectGithub },
+        { icon: <GrLinkNext key="link" />, link: connectLink },
+      ],
+      delay: 0.7,
+    },
+    {
+      id: 2,
+      title: "The Complete Stack",
+      description:
+        "Developed a MERN stack blogging platform with features like user authentication (Google OAuth via Firebase), blog post CRUD operations, comments, user profiles, and admin controls. Integrated Cloudinary for image storage and styled with Tailwind CSS for a responsive design.",
+      imageUrl: "blog.png",
+      icons: [
+        {
+          icon: (
+            <FaHeart
+              key="heart"
+              onClick={() => changeColor(2)}
+              color={heartColors[1]}
+            />
+          ),
+        },
         { icon: <FaGithub key="github" />, link: blogGithub },
         { icon: <GrLinkNext key="link" />, link: blogLink },
       ],
       delay: 0.7,
     },
     {
-      id: 2,
+      id: 3,
       title: "Portfolio Website",
       description:
         "Developed a personal portfolio website to showcase my skills, projects, and experience as a full stack web developer. Utilized modern web technologies like React and Tailwind to create a responsive, user-friendly design.",
@@ -57,7 +80,7 @@ const Projects = () => {
           icon: (
             <FaHeart
               key="heart"
-              onClick={() => changeColor(1)}
+              onClick={() => changeColor(3)}
               color={heartColors[1]}
             />
           ),
@@ -68,7 +91,7 @@ const Projects = () => {
       delay: 0.7,
     },
     {
-      id: 3,
+      id: 4,
       title: "Currency Convertor",
       description:
         "I developed a fully functional Currency Converter website using HTML, CSS, and JavaScript. This project leverages a reliable currency conversion API to provide real-time exchange rates. It allows users to convert amounts between different currencies.",
@@ -78,8 +101,8 @@ const Projects = () => {
           icon: (
             <FaHeart
               key="heart"
-              onClick={() => changeColor(2)}
-              color={heartColors[2]}
+              onClick={() => changeColor(4)}
+              color={heartColors[1]}
             />
           ),
         },
